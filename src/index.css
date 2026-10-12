@@ -1,0 +1,9 @@
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: #F58d1D;
+}
+svg{
+    fill: #F58d1D;
+}
