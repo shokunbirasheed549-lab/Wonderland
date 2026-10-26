@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
+import SendMessage from "../components/contact/SendMessage";
+import FindUs from "../components/contact/FindUs.jsx";
+import PageBanner from "../Components/HomePage/PageBanner.jsx";
+
 
 const Contact = () => {
-  return (
-    <div>
-      contact
+  return(
+   <div class="contact">
+<PageBanner title="About Us" breadcrumb="Home /About Us"
+    image="/image/contact-banner.jpg>
     </div>
-  )
-}
+    <SendMessage/>
+    <FindUs/>
+   );
+};
 
-export default Contact
+export default Contact;

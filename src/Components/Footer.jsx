@@ -13,23 +13,27 @@ import { IoLocationSharp } from "react-icons/io5";
 
 function Footer() {
   return (
-    <Container fluid className='bg-black text-white p-5'>
+    <Container fluid className='bg-black text-white p-5 footer' >
       <Row className='p-5'>
         <Col>
         <img src="\public\images\wonderland.png" alt="Wonderland Logo" height={100} />
         
       
         
-        <h5>Delicious meals, freshly prepared with love. Enjoy your favourite dishes and get them delivered straight to your doorstep.<p><IoLocationSharp /> Lagos, Nigeria</p></h5>
+        <h5>Delicious meals, freshly prepared with love. Enjoy your favourite dishes and get them delivered straight to your doorstep.
+        
+        
+        
+        <p><IoLocationSharp /> Lagos, Nigeria</p></h5>
         </Col>
       
         
         <Col>
             <h4>Quick Links</h4>
-            <li>Home</li>
-            <li>Our Menu</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
+            <a href="/Home"><li>Home</li></a>
+            <a href="/Menu"><li>Our Menu</li></a>
+            <a href="/About"><li>About Us</li></a>
+            <a href="/Contact"><li>Contact Us</li></a>
           </Col>
         <Col><h3>Contact Us <FaPhone /></h3>
             <h5>+234 800 000 0000</h5>

@@ -8,12 +8,12 @@ import {NavLink} from 'react-router-dom'
 import { FaShoppingCart } from "react-icons/fa";
 
 
-function NavBarMenu() {
+function NavBarMenu({ cartCount = 0}) {
   return (
     <Navbar expand="lg" className="bg-black">
       <Container fluid>
         <Navbar.Brand href="#home">
-          <img src="\images\wonder land cuisine.png" alt="Wonderland Logo" height={100} width={400} />
+          <img src="\images\wonder land cuisine.png" alt="Wonderland Logo" height={100} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -27,25 +27,25 @@ function NavBarMenu() {
             </NavLink>
            
             <NavDropdown title="Menu" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Local Dishes</NavDropdown.Item>
+              <NavDropdown.Item href="/menu">Local Dishes</NavDropdown.Item>
               
               
               <NavDropdown.Item href="#action5">
                 Foriegn Cusine
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
+            <Nav.Link href="#" >
               Desserts
             </Nav.Link>
-             <NavLink to="/Menu" className="nav-link">
+             <NavLink href="/Menu" className="nav-link">
               About
             </NavLink>
-             <NavLink to="/Contact" className="nav-link">
+             <NavLink href="/Contact" className="nav-link">
               Contact
             </NavLink>
-             <NavLink to="/Menu" className="nav-link">
-              Cart <FaShoppingCart />
-            </NavLink>
+             <Nav.Link href="/cart">
+              &#x1F6D2; Cart <span className='badge bg-danger'>({cartCount})</span>
+            </Nav.Link>
           </Nav>
          
         </Navbar.Collapse>
