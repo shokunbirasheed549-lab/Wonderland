@@ -1,14 +1,14 @@
 import React from 'react'
-import FoodCard from "../components/FoodCard";
-import  foods  from "../data/Food";
-import PopularDishes from '../components/menu/PopularDishes';
+import FoodCard from "../Components/FoodCard";
+import  Food  from "../data/Food";
+import PopularDishes from '../Components/menu/PopularDishes';
 import PageBanner from '../Components/HomePage/PageBanner';
 import SearchBar from '../Components/menu/SearchBar';
 
 
 
 
-const Menu = () => {
+const Menu = ({onAddToCart}) => {
   return (
    <>
     <PageBanner
@@ -20,7 +20,7 @@ const Menu = () => {
 
        <SearchBar />
       
-      <PopularDishes />
+      <PopularDishes onAddToCart={onAddToCart} />
       </>
   
   )

@@ -10,24 +10,31 @@ function Hero() {
       <Carousel.Item>
         <img src="\public\slider\slide-1.jpeg" alt="" />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>JUICY GRILLED CHICKEN</h3>
+          <p>     Juicy Grilled Chicken, Always a Good Idea Tender, well-seasoned and
+            grilled to perfection. Simple, delicious, satisfying.</p>
+             <button>Order Now →</button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img src="\public\slider\slide-2.jpeg" alt="" />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>AUTHENTIC JOLLOF RICE</h3>
+          <p>      Authentic Jollof Rice, Made with Love Rich flavour, fresh
+            ingredients, and the perfect blend of spices — just the way you love
+            it.</p>
+             <button>Order Now →</button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img src="\public\slider\slide-3.jpeg" alt="" />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3> FAST FOOD DELIVERY</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                Great Food, Fast Delivery Your favourite meals, at your convenience.
+            Fresh, hot and right on time.
           </p>
+           <button>Order Now →</button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

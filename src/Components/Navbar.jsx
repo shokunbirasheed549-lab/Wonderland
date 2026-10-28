@@ -3,16 +3,16 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {NavLink} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 
 import { FaShoppingCart } from "react-icons/fa";
 
 
 function NavBarMenu({ cartCount = 0}) {
   return (
-    <Navbar expand="lg" className="bg-black">
+    <Navbar expand="lg" className="bg-black" sticky="top">
       <Container fluid>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand as={Link} to="/">
           <img src="\images\wonder land cuisine.png" alt="Wonderland Logo" height={100} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -22,27 +22,27 @@ function NavBarMenu({ cartCount = 0}) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <NavLink to="/home" className="nav-link">
+            <Nav.Link as={Link} to="/">
               Home
-            </NavLink>
+            </Nav.Link>
            
             <NavDropdown title="Menu" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/menu">Local Dishes</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/menu">Local Dishes</NavDropdown.Item>
               
               
-              <NavDropdown.Item href="#action5">
+              <NavDropdown.Item as={Link} to="/menu">
                 Foriegn Cusine
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" >
+            <Nav.Link as={Link} to="/menu">
               Desserts
             </Nav.Link>
-             <NavLink href="/Menu" className="nav-link">
+             <Nav.Link as={Link} to="/about">
               About
-            </NavLink>
-             <NavLink href="/Contact" className="nav-link">
+            </Nav.Link>
+             <Nav.Link as={Link} to="/contact">
               Contact
-            </NavLink>
+            </Nav.Link>
              <Nav.Link href="/cart">
               &#x1F6D2; Cart <span className='badge bg-danger'>({cartCount})</span>
             </Nav.Link>

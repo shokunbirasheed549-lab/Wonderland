@@ -1,60 +1,81 @@
-import React, { useState } from 'react'
-import Home from './Pages/Home'
-import "./Test.css"
-import { BrowserRouter, Routes, Route} from "react-router-dom"
-import NavBarMenu from './Components/Navbar'
-import Menu from './Pages/Menu'
-import Contact from './Pages/Contact'
-import Footer from './Components/Footer'
+import React, { useState, useEffect } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+import Footer from './components/Footer'
 import Cart from './Pages/Cart'
-import About from './Pages/About'
+import Contact from './pages/Contact'
 import Service from './Pages/Service'
-
-
+import Menu from './pages/Menu'
+import Terms from './Pages/Terms'
+import NavbarMenu from './Components/Navbar' // Ensure this filename matches your components folder!
+import Home from './pages/Home'
+import About from './pages/About'
+import Checkout from './pages/Checkout'
+import OrderSuccess from './Pages/OrderSuccess'
+import Services from './Pages/Service'
 
 const App = () => {
-  const [cartItems, setCartItems] = useState([]);
+    // Optional: Load cart from localStorage so items don't reset on page refresh
+    const [cartItems, setCartItems] = useState(() => {
+      const savedCart = localStorage.getItem('cartItems');
+      return savedCart ? JSON.parse(savedCart) : [];
+    });
 
-      function addToCart(food) {
-        let newCart=[];
-        let foodFound = false;
+    useEffect(() => {
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }, [cartItems]);
 
-        for(let i = 0; i < cartItems.length; i++) {
-         let updateFood = {
-          id: cartItems[i].name,
-          name: cartItems[i].name,
-          price: cartItems[i].price,
-          image : cartItems[i].image,
-          description : cartItems[i].description,
-          quantity: cartItems[i].quantity +1,
-         }
-         newCart.push(updateFood);
-         foodFound=true;
-           }
-           
+    // Add item or increment quantity if it already exists (using functional update)
+    function addToCart(food) {
+      setCartItems(prevItems => {
+        const existingItem = prevItems.find(item => item.id === food.id);
+        if (existingItem) {
+          return prevItems.map(item => 
+            item.id === food.id ? { ...item, quantity: item.quantity + 1 } : item
+          );
+        } else {
+          return [...prevItems, { ...food, quantity: 1 }];
+        }
+      });
+    }
 
+    // Increase item quantity
+    function increaseQuantity(id) {
+      setCartItems(prevItems =>
+        prevItems.map(item => 
+          item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+        )
+      );
+    }
 
-      }
+    // Decrease item quantity (removes item completely if quantity drops below 1)
+    function decreaseQuantity(id) {
+      setCartItems(prevItems =>
+        prevItems
+          .map(item => item.id === id ? { ...item, quantity: item.quantity - 1 } : item)
+          .filter(item => item.quantity > 0)
+      );
+    }
 
-        
+    // Calculate total cart count for the navbar badge
+    const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
-     
-       
-      <BrowserRouter>
-      <NavBarMenu />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/service" element={<Service />} />
-
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    
+   <BrowserRouter>
+     <NavbarMenu cartCount={cartCount}/>
+     <Routes>
+       <Route path="/" element={<Home onAddToCart={addToCart}/>} />
+       <Route path="/about" element={<About />} />
+       <Route path="/cart" element={<Cart cartItems={cartItems} onIncrease={increaseQuantity} onDecrease={decreaseQuantity} onAddToCart={addToCart}/>} />
+       <Route path="/contact" element={<Contact />} />
+       <Route path="/service" element={<Services/>} />
+       <Route path="/checkout" element={<Checkout cartItems={cartItems} />} />
+       <Route path="/terms" element={<Terms/>} />
+       <Route path="/order-success" element={<OrderSuccess />} />
+       <Route path="/menu" element={<Menu onAddToCart={addToCart} />} />
+     </Routes>
+     <Footer />
+   </BrowserRouter>
   )
 }
 
