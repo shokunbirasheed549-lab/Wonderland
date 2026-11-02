@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import Footer from './components/Footer'
+import Footer from './Components/Footer'
 import Cart from './Pages/Cart'
-import Contact from './pages/Contact'
+import Contact from './Pages/Contact'
 import Service from './Pages/Service'
-import Menu from './pages/Menu'
+import Menu from './Pages/Menu'
 import Terms from './Pages/Terms'
 import NavbarMenu from './Components/Navbar' // Ensure this filename matches your components folder!
-import Home from './pages/Home'
-import About from './pages/About'
-import Checkout from './pages/Checkout'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Checkout from './Pages/Checkout'
 import OrderSuccess from './Pages/OrderSuccess'
 import Services from './Pages/Service'
+import Refund from './Pages/Refund'
+import Delivery from './Pages/Delivery'
+import OffersPromotions from './Pages/Offers'
+import PrivacyPolicy from './Pages/PrivacyPolicy'
+import Faqs from './Pages/Faqs'
 
 const App = () => {
     // Optional: Load cart from localStorage so items don't reset on page refresh
@@ -73,6 +78,11 @@ const App = () => {
        <Route path="/terms" element={<Terms/>} />
        <Route path="/order-success" element={<OrderSuccess />} />
        <Route path="/menu" element={<Menu onAddToCart={addToCart} />} />
+       <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+       <Route path='/faqs' element={<Faqs />} />
+       <Route path='/refund' element={<Refund />} />
+       <Route path='/delivery' element={<Delivery />} />
+       <Route path='/offer' element={<OffersPromotions />} />
      </Routes>
      <Footer />
    </BrowserRouter>

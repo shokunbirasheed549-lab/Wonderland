@@ -16,16 +16,9 @@ function Footer() {
     <Container fluid className='bg-black text-white p-5 footer' >
       <Row className='p-5'>
         <Col>
-        <img src="\public\images\wonderland.png" alt="Wonderland Logo" height={100} />
-        
-      
-        
-        <h5>Delicious meals, freshly prepared with love. Enjoy your favourite dishes and get them delivered straight to your doorstep.
-        
-        
-        
-        <p><IoLocationSharp /> Lagos, Nigeria</p></h5>
-        </Col>
+        <img src="\public\images\wonderland.png" alt="Wonderland Logo" width={100} />
+        <p>Delicious meals, freshly prepared with love. Enjoy your favourite dishes and get them delivered straight to your doorstep.
+        <p className='mt-5'><IoLocationSharp /> Lagos, Nigeria</p></p></Col>
       
         
         <Col>
@@ -35,12 +28,27 @@ function Footer() {
             <a href="/About"><li>About Us</li></a>
             <a href="/Contact"><li>Contact Us</li></a>
           </Col>
+            <Col>
+            <h4>Information</h4>
+            <a href="/terms"><li>Terms And Condition</li></a>
+            <a href="/privacy-policy"><li>Privacy Policy</li></a>
+            <a href="/faqs"><li>Faqs</li></a>
+            <a href="/refund"><li>Refund And Cancellation policy</li></a>
+            <a href="/delivery"><li>Delivery policy</li></a>
+            <a href="/offer"><li>offers and promotion</li></a>
+          </Col>
         <Col><h3>Contact Us <FaPhone /></h3>
             <h5>+234 800 000 0000</h5>
             <h5><MdEmail />hello@wonderland.com</h5>
             <h5><RiTimeLine />9 AM – 10 PM</h5>
-            <h5>© 2026 Wonderland. All rights reserved.</h5>
       </Col>
+      </Row>
+      <hr />
+
+      <Row>
+        <Col className='text-center'>
+        <h6>© 2026 Wonderland. All rights reserved.</h6>
+        </Col>
       </Row>
       
     </Container>
@@ -50,10 +58,3 @@ function Footer() {
 export default Footer;
 
 
-<div class="Container">
-  <div className="row">
-    <div className="col"></div>
-    <div className="col"></div>
-    <div className="col"></div>
-  </div>
-</div>
