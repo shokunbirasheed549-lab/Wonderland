@@ -4,7 +4,7 @@ const foods = [
     name: "Jollof Rice",
     price: 4500,
     category: "Rice",
-    image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b",
+    image: "https://unsplash.com",
     description: "Delicious Nigerian party jollof rice served with tasty chicken."
   },
   {
@@ -12,7 +12,7 @@ const foods = [
     name: "Fried Rice",
     price: 5000,
     category: "Rice",
-    image: "https://images.unsplash.com/photo-1512058564366-18510be2db19",
+    image: "https://unsplash.com",
     description: "Flavorful fried rice prepared with fresh vegetables and spices."
   },
   {
@@ -20,7 +20,7 @@ const foods = [
     name: "Grilled Chicken",
     price: 3000,
     category: "Chicken",
-    image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435",
+    image: "https://unsplash.com",
     description: "Juicy grilled chicken seasoned with our special house spices."
   },
   {
@@ -28,7 +28,7 @@ const foods = [
     name: "Beef Burger",
     price: 6500,
     category: "Burger",
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+    image: "https://unsplash.com",
     description: "A delicious beef burger with fresh vegetables and special sauce."
   },
   {
@@ -36,7 +36,7 @@ const foods = [
     name: "Chicken Burger",
     price: 6000,
     category: "Burger",
-    image: "https://images.unsplash.com/photo-1606755962773-d324e0a13086",
+    image: "https://unsplash.com",
     description: "Crispy chicken burger served with fresh lettuce and sauce."
   },
   {
@@ -44,7 +44,7 @@ const foods = [
     name: "Shawarma",
     price: 4500,
     category: "Fast Food",
-    image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783",
+    image: "https://unsplash.com",
     description: "Loaded chicken shawarma with vegetables and creamy sauce."
   },
   {
@@ -52,7 +52,7 @@ const foods = [
     name: "Pepperoni Pizza",
     price: 8500,
     category: "Pizza",
-    image: "https://images.unsplash.com/photo-1628840042765-356cda07504e",
+    image: "https://unsplash.com",
     description: "Classic pizza topped with rich tomato sauce, melted mozzarella, and spicy pepperoni."
   },
   {
@@ -60,7 +60,7 @@ const foods = [
     name: "Club Sandwich",
     price: 4000,
     category: "Sandwich",
-    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af",
+    image: "https://unsplash.com",
     description: "Triple-decker sandwich with toasted bread, grilled chicken, egg, lettuce, and mayo."
   },
   {
@@ -68,7 +68,7 @@ const foods = [
     name: "Meat Pie",
     price: 1500,
     category: "Snacks",
-    image: "https://www.bellanaija.com/wp-content/uploads/2025/01/KpwvzvaNC5U-HD.jpg",
+    image: "https://unsplash.com",
     description: "Flaky pastry crust stuffed with a savory, perfectly seasoned minced beef and vegetable filling."
   },
   {
@@ -76,7 +76,7 @@ const foods = [
     name: "Glazed Donuts",
     price: 2000,
     category: "Snacks",
-    image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87",
+    image: "https://unsplash.com",
     description: "Soft, fluffy yeast-risen donuts covered in a sweet, classic sugar glaze."
   },
   {
@@ -84,7 +84,7 @@ const foods = [
     name: "French Fries",
     price: 2500,
     category: "Sides",
-    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877",
+    image: "https://unsplash.com",
     description: "Golden, crispy potato fries lightly salted and served with ketchup."
   },
   {
@@ -92,7 +92,7 @@ const foods = [
     name: "Chocolate Milkshake",
     price: 3500,
     category: "Drinks",
-    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699",
+    image: "https://unsplash.com",
     description: "Rich and creamy milkshake blended with premium chocolate ice cream and topped with whipped cream."
   }
 ];
