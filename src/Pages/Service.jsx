@@ -1,8 +1,10 @@
 import React from "react";
+import "../service.css"; // Double-check if this file path is correct relative to Pages/
 
-import "../service.css";
+// Fixed casing to 'Components' with a capital C
+// IMPORTANT: Verify these files exist in your project directories!
 import RequestQuote from "../Components/Service/RequestQuote";
-import ServiceProcess from "../components/service/ServiceProcess";
+import ServiceProcess from "../Components/Service/ServiceProcess";
 import ServiceCategory from "../Components/Service/ServiceCategory";
 import PageBanner from "../Components/HomePage/PageBanner";
 

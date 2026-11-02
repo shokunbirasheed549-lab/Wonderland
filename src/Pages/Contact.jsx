@@ -1,6 +1,6 @@
 import React from "react";
-import SendMessage from "../components/contact/SendMessage";
-import FindUs from "../components/contact/FindUs";
+import SendMessage from "../Components/contact/SendMessage";
+import FindUs from "../Components/contact/FindUs";
 import PageBanner from "../Components/HomePage/PageBanner";
 
 const Contact = () => {
