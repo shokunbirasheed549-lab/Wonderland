@@ -7,7 +7,9 @@ import { FaRegStar } from "react-icons/fa";
 import { FaBowlFood } from "react-icons/fa6";
 import { GiChickenOven, GiFrenchFries } from "react-icons/gi";
 import { RiDrinks2Fill } from "react-icons/ri";
-import foods from "../../data/food";
+
+// FIXED: Capitalized the 'F' in Food to match your Food.js file exactly
+import foods from "../../data/Food";
 
 const PopularDishes = ({ onAddToCart }) => {
   return (
