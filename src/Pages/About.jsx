@@ -1,9 +1,10 @@
 import React from 'react';
-import PageBanner from '../Components/HomePage/PageBanner'; // Fixed path and uncommented
-import OurStory from '../Components/About/OurStory';        // Fixed to capital Components
-import OurValue from '../Components/About/OurValue';        // Fixed to capital Components
-import WhyChoseUs from '../Components/About/WhyChoseUs';    // Fixed to capital Components
-import MeetOurTeam from '../Components/About/MeetOurTeam';  // Fixed to capital Components
+import PageBanner from '../Components/HomePage/PageBanner'; 
+import OurStory from '../Components/About/OurStory';        
+import OurValue from '../Components/About/OurValue';        
+import WhyChoseUs from '../Components/About/WhyChoseUs';    
+import MeetOurTeam from '../Components/About/MeetOurTeam';  
+
 
 const About = () => {
   return (
